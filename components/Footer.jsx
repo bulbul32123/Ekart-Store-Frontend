@@ -70,7 +70,7 @@ export default function Footer() {
 
                 {/* <!-- social - start --> */}
                 <div className="flex gap-4">
-                  {socialLinks.map((lik) =>
+                  {socialLinks.map((lik,index) =>
                     <a href={lik.link} target="_blank" key={lik.id} className="text-gray-400 transition duration-100 hover:text-gray-500 active:text-gray-600">
                       <span>{lik.icon}</span>
                     </a>
@@ -126,8 +126,8 @@ export default function Footer() {
                   <nav className="flex flex-col gap-4">
                     {
                       li.links.map((i, index) => (
-                        <div>
-                          <Link href="/" className="text-gray-500 transition duration-100 hover:text-green-500 active:text-indigo-600" key={index}>{i}</Link>
+                        <div key={index}>
+                          <Link href="/" className="text-gray-500 transition duration-100 hover:text-green-500 active:text-indigo-600" >{i}</Link>
                         </div>
                       ))
                     }

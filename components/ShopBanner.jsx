@@ -24,7 +24,7 @@ export default function ShopBanner() {
             <div className="w-full">
                 <div className="flex max-lg:flex-wrap gap-4 pt-14 w-full h-full justify-center items-center">
                     {shopbanner.map((item) => (
-                        <div className="relative w-full rounded-md">
+                        <div className="relative w-full rounded-md" key={item?.id}>
                             <img src={item.img} alt={item.title} className="w-full h-96  object-cover rounded-3xl   object-center select-none pointer-events-none" />
                             <div className="absolute top-32 left-8 xl:left-14 w-60 md:w-96">
                                 <h1 className="text-5xl font-bold text-white">{item.title}</h1>

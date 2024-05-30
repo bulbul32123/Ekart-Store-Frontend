@@ -21,7 +21,7 @@ export default function SeachResultCard({ query, data }) {
                         const p = item?.attributes
                         return (
                             <Link href={`/products/${p?.slug}`
-                            } className="w-full flex gap-2 h-64 sm:h-40 bg-gray-50 rounded-md hover:bg-gray-100 p-[2px]" >
+                            } className="w-full flex gap-2 h-64 sm:h-40 bg-gray-50 rounded-md hover:bg-gray-100 p-[2px]" key={item?.id}>
                                 <div className="max-sm:w-full">
                                     <Image src={p?.thumbnail?.data?.attributes?.url} className='h-full w-full object-cover object-center rounded-sm' alt={p?.title} height={100} width={100} />
                                 </div>
@@ -48,8 +48,8 @@ export default function SeachResultCard({ query, data }) {
                                         <span className="sm:ml-3 text-gray-700">{p.num_reviews} Reviews</span>
                                     </div>
                                     <div className="flex gap-3 items-center mt-2">
-                                        {p?.colors?.colors?.map((color) => (
-                                            <div className="h-6 w-6 border ring-gray-800 ring-2 ring-offset-2 transition duration-100 rounded-full" style={{ backgroundColor: color }}></div>
+                                        {p?.colors?.colors?.map((color,index) => (
+                                            <div key={index} className="h-6 w-6 border ring-gray-800 ring-2 ring-offset-2 transition duration-100 rounded-full" style={{ backgroundColor: color }}></div>
                                         ))
                                         }
                                     </div>

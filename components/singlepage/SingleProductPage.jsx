@@ -97,7 +97,7 @@ const SingleProductPage = ({ products, product,relatedBrandProducts }) => {
                             <div className="mb-5 mt-2">
                                 {showError && <div className="text-red-600">Color selection is required</div>}
                                 {stocksOut && <div className="text-red-600">Sorry, the stocks are out.</div>}
-                                {isQuantityOverStocksForColor && <div className="text-red-600">Sorry, you can't add more of this item.</div>}
+                                {isQuantityOverStocksForColor && <div className="text-red-600">Sorry, you can&apos;t add more of this item.</div>}
                             </div>
                             <button
                                 className={`w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 ${isQuantityOverStocksForColor && 'cursor-not-allowed bg-black/25'}`}

@@ -4,8 +4,6 @@ import { IoSearchSharp } from 'react-icons/io5'
 import SearchCard from './SearchCard';
 import { useRouter } from 'next/navigation';
 
-
-let i = 1
 export default function SearchBar({ data }) {
     const router = useRouter()
     const [iSearchResultOpen, setIsSearchResultOpen] = useState(false);
@@ -23,7 +21,7 @@ export default function SearchBar({ data }) {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [])
+    }, [data])
     const navigateToSearchPage = (e) => {
         if (e.key === 'Enter' && SearchResultValue.length > 0) {
             router.push(`/search?query=${SearchResultValue}`)

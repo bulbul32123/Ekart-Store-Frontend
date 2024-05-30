@@ -110,7 +110,7 @@ export default function ProductCard({ item, isOffer, isWatchList }) {
                         {/*  Error Message */}
                         {showColorError && <div className="text-red-600">*Color selection is required*</div>}
                         {showStockoutError && <div className="text-red-600">*Sorry, the stocks are out.*</div>}
-                        {showQuantityError && <div className="text-red-600">*Sorry, you can't add more of this porduct.*</div>}
+                        {showQuantityError && <div className="text-red-600">*Sorry, you can&apos;t add more of this porduct.*</div>}
                         {/*  Error Message */}
 
                         {/* Card Detail */}

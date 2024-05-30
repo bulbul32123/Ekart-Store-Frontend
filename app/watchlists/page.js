@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 export default function WatchLists() {
   const { watchList } = useSelector((state) => state.cart);
-  console.log(watchList);
   return (
     <div>
       <div className="bg-white py-6 sm:py-8 lg:py-12">
