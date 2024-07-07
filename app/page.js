@@ -1,3 +1,4 @@
+
 import HeroBanner from "@/components/HeroBanner";
 import CardCarousel from "@/components/CardCarousel";
 import Link from "next/link";
@@ -9,12 +10,13 @@ import Image from "next/image";
 export default async function Home() {
   const { data } = await apiFetcher('/api/products?populate=*&pagination[page]=1&pagination[pageSize]=40')
 
+
   const newProducts = data?.filter((item) => (item?.attributes?.condition === 'new'))
   const popularProducts = data?.filter((item) => (item?.attributes?.condition === 'popular'))
   const trenddingProducts = data?.filter((item) => (item?.attributes?.condition === 'tredding'))
   return (
     <main className="mt-3">
-      <HeroBanner />
+      <HeroBanner data={data} />
 
 
       {/* Browse by Category start */}

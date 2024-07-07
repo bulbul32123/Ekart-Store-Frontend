@@ -23,7 +23,8 @@ const SildeData = [
   },
 ]
 
-export default function HeroBanner() {
+export default function HeroBanner({ data }) {
+  console.log(data);
   return (
     <div className='relative text-white  rounded-2xl text-[20px] w-full max-w-[1360px] mx-auto'>
       <Carousel
