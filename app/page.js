@@ -9,6 +9,7 @@ import Image from "next/image";
 
 export default async function Home() {
   const { data } = await apiFetcher('/api/products?populate=*&pagination[page]=1&pagination[pageSize]=40')
+  console.log(data)
 
 
   const newProducts = data?.filter((item) => (item?.attributes?.condition === 'new'))
